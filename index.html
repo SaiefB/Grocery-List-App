@@ -12,22 +12,22 @@
         <img class="logo" src="./images/Logo/grocerease-high-resolution-logo-transparent.png" alt="">
     </header>
     <article class="hero">
-        <div>
+        <div class="container">
             <h2>Simplifying Shopping One List at a Time</h2>
-            <div>
-                <input type="text" name="" id="">
-                <button>Add item</button>
+            <div class="row">
+                <input type="text" name="" id="input-box" placeholder="What item would you like to add?">
+                <button onclick="addTask()">Add item</button>
             </div>
-            
         </div>
         
     </article>
     <main>
-        <div>
-            <ul>
-                <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
+        <div class="list-container">
+            <p>My Shopping List:</p>
+            <ul id="list-container">
+                <li class="checked">Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
             </ul>
         </div>
         

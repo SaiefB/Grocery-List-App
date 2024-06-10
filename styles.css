@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /*   border: 1px solid #000; */
+    /* border: 1px solid #000; */
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
@@ -18,6 +18,8 @@
 body {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -33,16 +35,131 @@ header {
     width: 300px;
 }
 
-article {
+.hero {
     background-color: var(--White);
-    height: 200px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
 }
 
 h2 {
     margin: 30px;
+    color: var(--LightGreen);
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Grey);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: var(--Dark-Green);
+    color: var(--Yellow);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:hover {
+    background: var(--Yellow);
+    color: var(--Dark-Green);
 }
 
 main {
     background-color: var(--LightGreen);
-    height: 100vh;
+    flex: 1;
+}
+
+p {
+    color: var(--White);
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 540px;
+    background: var(--Dark-Green);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(42, 41, 41);
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+    color: var(--White);
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: var(--Yellow);
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: var(--Yellow);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: var(--Yellow);
+    color: var(--Dark-Green);
 }
