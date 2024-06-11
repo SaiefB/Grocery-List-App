@@ -18,6 +18,16 @@ function addTask() {
     saveData();// saves to the local storage
 }
 
+// Function to handle keypress event
+function handleKeyPress(event) {
+    if (event.keyCode === 13) { // Check if Enter key is pressed
+        addTask();
+    }
+}
+
+// Event listener for keypress event on inputBox
+inputBox.addEventListener("keypress", handleKeyPress);
+
 //adds the ability to save tasks which have been inputted.
 listContainer.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
